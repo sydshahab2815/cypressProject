@@ -1,0 +1,11 @@
+{
+ "name" :"bob",
+ "email":"shah@gmail.com",
+ "registeredEmailAddress" :"shahab@gmail.com",
+ "password":"India@123!",
+ "invalidPassword": "India",
+ "invalidEmail":"shah",
+ "baseurl":"https://miro.com/signup/"
+}
+
+

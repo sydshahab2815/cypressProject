@@ -1,0 +1,30 @@
+{
+  "chromeWebSecurity":false,
+  "defaultCommandTimeout": 8000,
+  "pageLoadTimeout": 30000,
+  
+  "projectId": "uz1rn4",
+  
+  "env": {
+    "url": "https:miro.com/signup/"
+  },
+  "testFiles": "**/*.js",
+
+  "retries": {
+    
+    "runMode": 1
+  },
+  
+  "reporter": "cypress-mochawesome-reporter",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "charts": true,
+    "reportPageTitle": "My Test Suite",
+    "embeddedScreenshots": true,
+    "inlineAssets": true
+  },
+  "video": false
+ 
+  
+  
+}
