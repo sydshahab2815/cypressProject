@@ -17,7 +17,7 @@ Now you can open Cypress from your project root one of the following ways:
 
 npx cypress open or node_modules\.bin\cypress open 
 
-#$ Please refer to package.json for the scripts for running test
+## Please refer to package.json for the scripts for running test
 
 #
 
