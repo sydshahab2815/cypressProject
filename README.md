@@ -1,3 +1,12 @@
+
+## Introduction to the tool
+Cyress is a purely JavaScript-based froent end testing tool for the modern web.
+It has good documentation
+Friendly communcation.
+Uses the same technique as Selenium
+Cypress is desiged for E2E testing. 
+
+
 ## cypressProject
 This is End2End project made in Cypress. 
 The project cover the SignUp page user cases.
