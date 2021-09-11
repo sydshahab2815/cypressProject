@@ -14,7 +14,6 @@
     
     "runMode": 1
   },
-  
   "reporter": "cypress-mochawesome-reporter",
   "reporterOptions": {
     "reportDir": "cypress/reports",
@@ -24,7 +23,4 @@
     "inlineAssets": true
   },
   "video": false
- 
-  
-  
 }

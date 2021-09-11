@@ -29,7 +29,7 @@ describe('Miro SignUp page', function(){
         signuppage.getErrorMsgOnEmailField().should('be.visible')
     })
  
-    it.only("Validate SignUP page with invalid password" ,function(){
+    it("Validate SignUP page with invalid password" ,function(){
         const signuppage = new SignUpPage()
         cy.visit(this.data.baseurl)
         signuppage.getName().type(this.data.name)
@@ -40,7 +40,7 @@ describe('Miro SignUp page', function(){
         signuppage.getErrorMsgOnPasswordField().should('be.visible')
     })
    
-    it("Validate SignUP page without accepting Terms And Condition" ,function(){
+    it.only("Validate SignUP page without accepting Terms And Condition" ,function(){
         const signuppage = new SignUpPage()
         cy.visit(this.data.baseurl)
         signuppage.getName().type(this.data.name)
