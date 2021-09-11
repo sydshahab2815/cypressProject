@@ -28,6 +28,16 @@ npx cypress open or node_modules\.bin\cypress open
 
 ## Please refer to package.json for the scripts for running test
 
+By default cypress run the test in Electron browser. to run the test in diff browser 
+## --browser chrome 
+   npm run test -- --browser chrome
+
+## Headless Run
+   node_modules\.bin\cypress run
+
+## Headed Run
+   npm run test -- --headed
+
 ## HTML Reports
 Implement HTML Reports With Screenshots using Cypress Mochawesome Reporter.
 ### Path  Project Root Directory > Navigate to cypress folder > reports folder > index.html
