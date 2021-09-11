@@ -7,20 +7,18 @@ describe('Miro SignUp page', function(){
     {
         this.data=data
     })
-    //const signuppage = new SignUpPage()
+    const signuppage = new SignUpPage()
+    cy.visit(this.data.baseurl)
     })
 
     it("Validate SignUP page with no login details" ,function(){
         const signuppage = new SignUpPage()
-        cy.visit(this.data.baseurl)
         signuppage.getSubmitButton().click()
         signuppage.getErrorMsgOnEmailField().should('be.visible')
         signuppage.getErrorMsgOnTnCField().should('be.visible')
     })
 
     it("Validate SignUP page with invalid email address" ,function(){
-        const signuppage = new SignUpPage()
-        cy.visit(this.data.baseurl)
         signuppage.getName().type(this.data.name)
         signuppage.getEmail().type(this.data.invalidEmail).wait(300).should('be.visible')
         signuppage.getPassword().type(this.data.password).should('be.visible')
@@ -30,8 +28,6 @@ describe('Miro SignUp page', function(){
     })
  
     it("Validate SignUP page with invalid password" ,function(){
-        const signuppage = new SignUpPage()
-        cy.visit(this.data.baseurl)
         signuppage.getName().type(this.data.name)
         signuppage.getEmail().type(this.data.email).should('be.visible')
         signuppage.getPassword().type(this.data.invalidPassword).wait(300).should('be.visible')
@@ -40,9 +36,7 @@ describe('Miro SignUp page', function(){
         signuppage.getErrorMsgOnPasswordField().should('be.visible')
     })
    
-    it.only("Validate SignUP page without accepting Terms And Condition" ,function(){
-        const signuppage = new SignUpPage()
-        cy.visit(this.data.baseurl)
+    it("Validate SignUP page without accepting Terms And Condition" ,function(){
         signuppage.getName().type(this.data.name)
         signuppage.getEmail().type(this.data.email).should('be.visible')
         signuppage.getPassword().type(this.data.password).should('be.visible')
@@ -51,9 +45,7 @@ describe('Miro SignUp page', function(){
         signuppage.getErrorMsgOnTnCField().should('be.visible')
     })
 
-    it("Validate SignUP page with already registered email address" ,function(){
-        const signuppage = new SignUpPage()
-        cy.visit(this.data.baseurl)
+    it.only("Validate SignUP page with already registered email address" ,function(){
         signuppage.getName().type(this.data.name)
         signuppage.getEmail().type(this.data.registeredEmailAddress).should('be.visible')
         signuppage.getPassword().type(this.data.password).should('be.visible')
@@ -73,7 +65,6 @@ describe('Miro SignUp page', function(){
     })  
 
     it("Validate SignUP page with valid user details" ,function(){
-        const signuppage = new SignUpPage()
         cy.visit(this.data.baseurl)
         signuppage.getName().type(this.data.name)
         const randomstring = () => Cypress._.random(0,1e6)
